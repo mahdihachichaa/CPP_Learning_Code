@@ -58,15 +58,15 @@ const bool b20;
 ```cpp
 #include <iostream>
 
-XX add(XX a, XX b) {
+int add(int a, int b) {
   return a + b;
 }
 
-XX add_to(XX a, XX b) {
+void add_to(int& a, int b) {
   a += b;
 }
 
-XX another_add_to(XX a, XX b) {
+void another_add_to(int* a, int b) {
   *a += b;
 }
 
@@ -84,6 +84,11 @@ int main() {
 2. En C++, vous pouvez passer vos paramètres par valeur, par référence et par référence constante.
 Quelles sont les différences entre ces différentes méthodes de passage ?
 Dans quels contextes est-il préférable de passer par valeur ? Par référence ? Et par référence constante ?
+
+On passe par référence quand on veut modifier à son adresse, par varleur quand on ne veut pas forcèment 
+modifier en mémoire et par référence constante quand on ne veut pas modif cette valeur.
+
+
 
 3. Modifiez les signatures des fonctions suivantes de manière à ce que le passage de paramètres soit le plus efficace et sécurisé possible.
 Vous pouvez vous aidez des commentaires pour comprendre comment les fonctions utilisent leurs paramètres.
