@@ -29,6 +29,7 @@ int main() {
   add1.apply();
   
   std::cout << add5.global_sum << std::endl << add1.global_sum << std::endl;
+  //ici on affiche 5 pour le premier et 2 pour le 2ème
   return 0;
 }
 ```
